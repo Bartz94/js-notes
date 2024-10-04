@@ -50,14 +50,14 @@ textarea,
     border: 1px solid transparent;
 }
 
-input,
-textarea,
+input:hover,
+textarea:hover,
 .search-input:hover {
     background-color: #DCDEE0;
 }
 
-input,
-textarea,
+input:focus,
+textarea:focus,
 .search-input:focus {
     background-color: #FFFFFF;
     outline: none;
@@ -83,7 +83,7 @@ textarea,
     justify-content: space-between;
     align-items: center;
     min-width: 335px;
-    min-height: 112px;
+    height: auto;
     padding: 10px;
     margin-top: 20px;
     border-radius: 12px;
@@ -97,12 +97,36 @@ textarea,
     display: flex;
     flex-direction: column;
     gap: 16px;
+    max-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#notes-list::-webkit-scrollbar {
+    width: 5px;
+}
+
+#notes-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+
+#notes-list::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+    border: 1px solid #f1f1f1;
+}
+
+#notes-list::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
 
 .note-content {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    height: auto;
+
 }
 
 .empty-note-content {
