@@ -11,7 +11,7 @@ const confirmDeleteBtn = document.getElementById('confirmDelete');
 const cancelDeleteBtn = document.getElementById('cancelDelete');
 let noteToDeleteIndex = null;
 let editingNoteId = null;
-let notes = [];
+let notes = JSON.parse(localStorage.getItem('notes')) || [];
 
 // Render notes function
 function renderNotes() {
