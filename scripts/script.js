@@ -96,7 +96,7 @@ function renderNotes() {
 function showAddNoteModal() {
     noteTitleInput.value = '';
     noteBodyInput.value = '';
-    document.getElementById('formTitle').innerText = 'Add New Note';
+    document.getElementById('formTitle').innerText = 'Add new note';
     editingNoteId = null;
     noteModal.style.display = 'flex';
 }
@@ -106,7 +106,7 @@ function editNote(noteId) {
     const note = notes.find(note => note.id === noteId);
     noteTitleInput.value = note.title;
     noteBodyInput.value = note.body;
-    document.getElementById('formTitle').innerText = 'Edit Note';
+    document.getElementById('formTitle').innerText = 'Edit note';
     editingNoteId = noteId;
     noteModal.style.display = 'flex';
 }
@@ -129,7 +129,6 @@ saveNoteBtn.addEventListener('click', () => {
     if (editingNoteId !== null) {
         notes.find(note => note.id === editingNoteId).title = title;
         notes.find(note => note.id === editingNoteId).body = body;
-        notes.find(note => note.id === editingNoteId).date = date;
     } else {
         const newNote = {
             id: Math.floor(Math.random() * 1000000) + 1,

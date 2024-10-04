@@ -31,14 +31,15 @@
                 <input class="search-input" id="search" type="text" placeholder="Search notes...">
             </div>
 
-            <custom-button max-width="370px" width="100%" variant="primary" id="addNoteBtn">Add New</custom-button>
+            <custom-button width="365px" variant="primary" id="addNoteBtn">Add New</custom-button>
         </div>
 
         <!-- Add new and edit note modal-->
         <div id="noteModal" class="modal" style="display: none;">
             <div class="modal-content">
                 <div class="modal-header-wrapper">
-                    <h2 id="formTitle">Add new Note</h2>
+                    <custom-typography font-size="16px" font-weight="500" id="formTitle">Add new
+                        note</custom-typography>
                     <p class="hover-text" id="cancelBtn">Cancel</p>
                 </div>
                 <input type="text" id="noteTitle" placeholder="Note title" required>
