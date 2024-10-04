@@ -9,9 +9,9 @@ class CustomButton extends HTMLElement {
     const style = document.createElement('style');
     style.textContent = `
       button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        font-family: 'Inter', sans-serif;
+        box-sizing: border-box; 
+        width: 100%;
         padding: 8px 16px;
         font-size: 16px;
         border: none;
@@ -20,11 +20,9 @@ class CustomButton extends HTMLElement {
         transition: background-color 0.3s ease;
         width: ${this.getAttribute('width') || '100%'};
         max-width: ${this.getAttribute('max-width') || '100%'};
-        margin: 0 auto;
       }
 
       button svg {
-        font-weight: 700;
         margin-right: 8px;
         width: 20px;
         height: 20px;
@@ -33,7 +31,6 @@ class CustomButton extends HTMLElement {
       button.primary {
         color: #FFFFFF;
         background-color: #6B3C9B;
-        font-weight: 500;
       }
 
       button.primary:hover {
@@ -72,7 +69,7 @@ class CustomButton extends HTMLElement {
       const iconElement = document.createElement('span');
       iconElement.innerHTML = icon;
       button.prepend(iconElement);
-      button.style.fontWeight = '500'
+      button.style.fontWeight = '900'
       button.style.color = '#1B1C1E'
       button.style.backgroundColor = '#FFFFFF'
     }

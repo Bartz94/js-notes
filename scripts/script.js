@@ -74,7 +74,7 @@ function renderNotes() {
 
 
             <custom-typography font-size="20px" font-weight="500" >No notes yet</custom-typography>
-            <custom-typography font-size="16px" font-weight="400" >Add a note to keep track of your learnings.</custom-typography>
+            <custom-typography align="center" font-size="16px" font-weight="400" >Add a note to keep track of your learnings.</custom-typography>
 
             <custom-button 
                 icon='<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">

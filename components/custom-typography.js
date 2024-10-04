@@ -16,7 +16,6 @@ class CustomTypography extends HTMLElement {
     const fontWeight = this.getAttribute('font-weight') || '400';
     const fontSize = this.getAttribute('font-size') || '14px';
     const color = this.getAttribute('color') || '#1B1C1E';
-
     this.shadowRoot.innerHTML = `
         <style>
           p {
