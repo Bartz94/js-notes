@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M8.40636 22.6771V23.4101C8.18802 23.1883 8.09595 22.9551 8.09595 22.6771V7.32296C8.09595 7.01928 8.19532 6.77799 8.41482 6.5585C8.63925 6.33407 8.87479 6.23962 9.15636 6.23962H17.1415L21.9272 11.0253V22.6771C21.9272 22.9587 21.8328 23.1942 21.6083 23.4187C21.3888 23.6382 21.1475 23.7375 20.8439 23.7375H9.15636C8.87835 23.7375 8.64522 23.6455 8.42334 23.4271H9.15636H20.8439H21.5939V22.6771V11.5855V10.8355H20.8439H17.2626V7.32296V6.57296H16.5126H9.15636H8.40636V7.32296V11.5855V22.6771Z"
+                    fill="#1B1C1E" stroke="#1B1C1E" stroke-width="1.5" />
+            </svg>
+            <custom-typography font-size="20px" font-weight="500">Notes</custom-typography>
+        </div>
+
+        <div class="search-bar">
+            <div class="input-container">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="input-icon">
+                    <path
+                        d="M19.9 20.975L13.325 14.4C12.825 14.8333 12.2417 15.1708 11.575 15.4125C10.9083 15.6541 10.2 15.775 9.45 15.775C7.65 15.775 6.125 15.15 4.875 13.9C3.625 12.65 3 11.1416 3 9.37498C3 7.60831 3.625 6.09998 4.875 4.84998C6.125 3.59998 7.64167 2.97498 9.425 2.97498C11.1917 2.97498 12.6958 3.59998 13.9375 4.84998C15.1792 6.09998 15.8 7.60831 15.8 9.37498C15.8 10.0916 15.6833 10.7833 15.45 11.45C15.2167 12.1166 14.8667 12.7416 14.4 13.325L21 19.875L19.9 20.975ZM9.425 14.275C10.775 14.275 11.925 13.7958 12.875 12.8375C13.825 11.8791 14.3 10.725 14.3 9.37498C14.3 8.02498 13.825 6.87081 12.875 5.91248C11.925 4.95414 10.775 4.47498 9.425 4.47498C8.05833 4.47498 6.89583 4.95414 5.9375 5.91248C4.97917 6.87081 4.5 8.02498 4.5 9.37498C4.5 10.725 4.97917 11.8791 5.9375 12.8375C6.89583 13.7958 8.05833 14.275 9.425 14.275Z"
+                        fill="#5B5C5E" />
+                </svg>
+                <input class="search-input" id="search" type="text" placeholder="Search notes...">
+            </div>
+
+            <custom-button max-width="370px" width="100%" variant="primary" id="addNoteBtn">Add New</custom-button>
+        </div>
+
+        <!-- Add new and edit note modal-->
+        <div id="noteModal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <div class="modal-header-wrapper">
+                    <h2 id="formTitle">Add new Note</h2>
+                    <p class="hover-text" id="cancelBtn">Cancel</p>
+                </div>
+                <input type="text" id="noteTitle" placeholder="Note title" required>
+                <textarea class="custom-textarea" rows="15" id="noteBody" placeholder="Your note" required></textarea>
+                <div style="display: flex; justify-content: flex-end;">
+                    <custom-button variant="primary" id="saveNoteBtn">Save</custom-button>
+                </div>
+            </div>
+        </div>
+
+        <!-- List of notes -->
+        <div id="notes-list"></div>
+
+        <!-- Delete note modal -->
+        <div id="deleteModal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <custom-typography font-weight="700" font-size="20px">Delete note</custom-typography>
+                <custom-typography font-size="16px">Are you sure you want to delete this note?</custom-typography>
+                <div class="delete-modal-button-wrapper">
+                    <custom-button variant="secondary" id="confirmDelete">Yes</custom-button>
+                    <custom-button variant="secondary" id="cancelDelete">No</custom-button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="custom-button.js"></script>
+    <script src="custom-input.js"></script>
+    <script type="module" src="custom-typography.js"></script>
+</body>
+
+</html>
