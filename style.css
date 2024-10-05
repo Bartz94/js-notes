@@ -25,10 +25,35 @@ body {
     width: 100%;
 }
 
-.search-input {
+.search-input,
+input,
+textarea {
     width: 100%;
-    padding-left: 40px;
+    padding: 8px 12px;
+    font-family: 'Inter', sans-serif;
+    border-radius: 12px;
+    background-color: #EEEFF0;
+    transition: background-color 0.3s ease;
+    border: 1px solid transparent;
     box-sizing: border-box;
+}
+
+.search-input {
+    padding-left: 40px;
+}
+
+input:hover,
+textarea:hover,
+.search-input:hover {
+    background-color: #DCDEE0;
+}
+
+input:focus,
+textarea:focus,
+.search-input:focus {
+    background-color: #FFFFFF;
+    outline: none;
+    border: 1px solid #BDC3C7;
 }
 
 .input-icon {
@@ -49,55 +74,24 @@ body {
     margin: 16px 0;
 }
 
-input,
-textarea,
-.search-input {
-    font-family: 'Inter', sans-serif;
-    padding: 8px 12px;
+.note,
+.modal-content,
+.delete-modal-content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 24px;
+    background-color: white;
     border-radius: 12px;
-    background-color: #EEEFF0;
-    transition: background-color 0.3s ease;
-    border: 1px solid transparent;
-}
-
-input:hover,
-textarea:hover,
-.search-input:hover {
-    background-color: #DCDEE0;
-}
-
-input:focus,
-textarea:focus,
-.search-input:focus {
-    background-color: #FFFFFF;
-    outline: none;
-    border: 1px solid #BDC3C7;
-}
-
-.search-input {
-    padding-left: 40px;
-}
-
-.custom-textarea {
-    padding: 8px 12px;
-    border-radius: 12px;
-    background-color: #EEEFF0;
-    transition: background-color 0.3s ease;
-    border: 1px solid transparent;
+    box-shadow: 0px 4px 16px 0px #00000012;
 }
 
 .note {
-    display: flex;
     justify-content: space-between;
     align-items: center;
-    /* min-width: 335px; */
-    height: auto;
     padding: 10px;
     margin-top: 20px;
-    border-radius: 12px;
     gap: 16px;
-    border-radius: 12px;
-    box-shadow: 0px 4px 16px 0px #00000012;
     position: relative;
 }
 
@@ -182,28 +176,6 @@ textarea:focus,
     justify-content: center;
     align-items: center;
     z-index: 999;
-}
-
-.modal-content {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    padding: 20px;
-    width: 90%;
-    max-width: 450px;
-    gap: 24px;
-}
-
-.delete-modal-content {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 450px;
-    gap: 24px;
 }
 
 .modal-header-wrapper {
