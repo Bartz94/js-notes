@@ -30,7 +30,7 @@ export function renderNotes() {
 
     const sortedNotes = filteredNotes.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-    if (sortedNotes.length > 0) {
+    if (sortedNotes.length >= 0) {
         addNoteBtn.style.display = 'inline-block';
 
         sortedNotes.forEach((note) => {
