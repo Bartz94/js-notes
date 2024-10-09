@@ -3,6 +3,7 @@ import { hideNoteModal } from './modal.js';
 import { editingNoteId } from './modal.js';
 
 export function addNote() {
+    const emptyNotesList = document.getElementById('empty-notes');
     const noteTitle = document.getElementById('noteTitle').value.trim();
     const noteBody = document.getElementById('noteBody').value.trim();
     const date = new Date().toLocaleString();
@@ -26,7 +27,7 @@ export function addNote() {
         };
         notes.push(newNote);
     }
-
+    emptyNotesList.style.display = 'none';
     localStorage.setItem('notes', JSON.stringify(notes));
     hideNoteModal();
     renderNotes();
@@ -37,5 +38,6 @@ export function confirmDelete() {
     const updatedNotes = notes.filter(note => note.id !== window.noteToDeleteIndex);
     localStorage.setItem('notes', JSON.stringify(updatedNotes));
     document.getElementById('deleteModal').style.display = 'none';
+
     renderNotes();
 }

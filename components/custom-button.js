@@ -69,9 +69,12 @@ class CustomButton extends HTMLElement {
       const iconElement = document.createElement('span');
       iconElement.innerHTML = icon;
       button.prepend(iconElement);
-      button.style.fontWeight = '900'
-      button.style.color = '#1B1C1E'
-      button.style.backgroundColor = '#FFFFFF'
+      button.style.display = 'flex';
+      button.style.alignItems = 'center';
+      button.style.justifyContent = 'center';
+      button.style.fontWeight = '500';
+      button.style.color = '#1B1C1E';
+      button.style.backgroundColor = '#FFFFFF';
     }
 
     // Attach the styles and the button to the shadow DOM
