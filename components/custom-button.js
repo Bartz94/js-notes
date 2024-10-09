@@ -20,6 +20,9 @@ class CustomButton extends HTMLElement {
         transition: background-color 0.3s ease;
         width: ${this.getAttribute('width') || '100%'};
         max-width: ${this.getAttribute('max-width') || '100%'};
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
       button svg {
@@ -56,6 +59,12 @@ class CustomButton extends HTMLElement {
         background-color: #BDBDBD;
         border: 1px solid #BCBCBD;
       }
+
+      button.icon {
+        background-color: #FFFFFF; 
+        color: #1B1C1E; 
+        font-weight: 500;
+      }
     `;
 
     const button = document.createElement('button');
@@ -69,15 +78,9 @@ class CustomButton extends HTMLElement {
       const iconElement = document.createElement('span');
       iconElement.innerHTML = icon;
       button.prepend(iconElement);
-      button.style.display = 'flex';
-      button.style.alignItems = 'center';
-      button.style.justifyContent = 'center';
-      button.style.fontWeight = '500';
-      button.style.color = '#1B1C1E';
-      button.style.backgroundColor = '#FFFFFF';
+      button.classList.add('icon');
     }
 
-    // Attach the styles and the button to the shadow DOM
     this.shadowRoot.append(style, button);
   }
 }

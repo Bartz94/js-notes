@@ -21,6 +21,7 @@ export function renderNotes() {
 
     if (notes.length === 0) {
         document.getElementById('search').disabled = true;
+        document.getElementById('search').value = '';
         emptyNotes.style.display = "block";
         addNoteBtn.style.display = 'none';
         emptyNotesElement.style.display = 'flex';
@@ -77,4 +78,3 @@ export function renderNotes() {
         emptyNotes.removeChild(emptyNotesElement);
     }
 }
-
